@@ -1,6 +1,10 @@
 package ca.umeshkhanna.compass;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -67,7 +71,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
-    private static class MyOnClickListener implements View.OnClickListener {
+    private class MyOnClickListener implements View.OnClickListener {
 
         private final Context context;
 
@@ -77,6 +81,23 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         public void onClick(View v) {
+            new AlertDialog.Builder(context)
+                    .setTitle("Umesh Kumar Khanna")
+                    .setMessage("If I could make this in a couple hours, think of what I can do in four months!")
+
+                    .setPositiveButton("Contact Me", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(Intent.ACTION_VIEW,
+                                    Uri.parse("http://www.umeshkhanna.ca"));
+                            startActivity(intent);
+                        }
+                    })
+                    .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            // do nothing
+                        }
+                    })
+                    .show();
 
            // removeItem(v);
         }

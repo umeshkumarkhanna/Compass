@@ -22,6 +22,9 @@
         android:background="#f78a8689"
         android:layout_marginBottom="5dp">
 
+
+
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -33,52 +36,87 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="35dp"
         android:layout_weight="1"
-        android:background="#FFFF0000"
         android:ellipsize="end"
         android:maxLines="1"
         android:scrollHorizontally="true"
-        android:id="@+id/addressField"
-        android:text="textview2" />
-    
+        android:layout_marginLeft="22dp"
+        android:id="@+id/textViewAddress"
+        android:textSize="20dp"
+        android:textColor="#353839"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"/>
+
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+
         >
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="30dp"
         android:layout_weight="1"
-        android:background="#FFFF0000"
+
         android:ellipsize="end"
         android:maxLines="1"
         android:scrollHorizontally="true"
-        android:id="@+id/textViewName" />
+        android:id="@+id/textViewBed"
+        android:textSize="14dp"
+        android:gravity="center_horizontal"
+        android:textColor="#353839"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="20dp"
+            android:id="@+id/separator2"
+            android:visibility="visible"
+            android:background="@android:color/darker_gray"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="30dp"
         android:layout_weight="0"
-        android:background="#FF00FF00"
+
         android:ellipsize="end"
         android:maxLines="1"
         android:scrollHorizontally="true"
-        android:layout_marginLeft="35dp"
-        android:text="textview2" />
+        android:id="@+id/textViewBath"
+        android:textSize="14dp"
+        android:gravity="center_horizontal"
+        android:textColor="#353839"/>
+        <View
+            android:layout_width="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="20dp"
+            android:id="@+id/separator3"
+            android:visibility="visible"
+            android:background="@android:color/darker_gray"/>
+
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="120dp"
             android:layout_height="30dp"
             android:layout_weight="0"
-            android:background="#FF00FF00"
+            android:id="@+id/textViewPrice"
             android:ellipsize="end"
             android:maxLines="1"
             android:scrollHorizontally="true"
-            android:layout_marginLeft="40dp"
-            android:text="textview3" />
+
+            android:textSize="14dp"
+            android:gravity="center_horizontal"
+            android:textColor="#353839"/>
+
     </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:id="@+id/separator1"
+        android:visibility="visible"
+        android:background="@android:color/darker_gray"
+       />
 
 </LinearLayout>
 

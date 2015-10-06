@@ -18,14 +18,19 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView textViewName;
-//        TextView textViewEmail;
+        TextView textViewAddress;
+        TextView textViewBed;
+        TextView textViewPrice;
+        TextView textViewBath;
         ImageView imageViewIcon;
+
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            this.textViewName = (TextView) itemView.findViewById(R.id.textViewName);
-//            this.textViewEmail = (TextView) itemView.findViewById(R.id.textViewEmail);
+            this.textViewAddress = (TextView) itemView.findViewById(R.id.textViewAddress);
+            this.textViewBed = (TextView) itemView.findViewById(R.id.textViewBed);
+            this.textViewBath = (TextView) itemView.findViewById(R.id.textViewBath);
+            this.textViewPrice = (TextView) itemView.findViewById(R.id.textViewPrice);
             this.imageViewIcon = (ImageView) itemView.findViewById(R.id.imageView);
         }
     }
@@ -49,12 +54,23 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int listPosition) {
 
-        TextView textViewName = holder.textViewName;
-//        TextView textViewEmail = holder.textViewEmail;
+        TextView textViewAddress = holder.textViewAddress;
+        TextView textViewPrice = holder.textViewPrice;
+        TextView textViewBed = holder.textViewBed;
+        TextView textViewBath = holder.textViewBath;
         ImageView imageView = holder.imageViewIcon;
 
-        textViewName.setText(listingDataSet.get(listPosition).getName());
-//        textViewEmail.setText(peopleDataSet.get(listPosition).getEmail());
+        textViewAddress.setText(listingDataSet.get(listPosition).getName());
+        String listingPrice = "$" + listingDataSet.get(listPosition).getPrice();
+        textViewPrice.setText(listingPrice);
+
+        String amountOfBeds = listingDataSet.get(listPosition).getNumOfBed() + " BED";
+        String amountOfBaths = String.valueOf(listingDataSet.get(listPosition).getNumOfBath()) + " BATH";
+
+        textViewBed.setText(amountOfBeds);
+        textViewBath.setText(amountOfBaths);
+
+
         imageView.setImageResource(listingDataSet.get(listPosition).getImage());
     }
 

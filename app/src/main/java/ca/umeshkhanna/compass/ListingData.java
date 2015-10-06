@@ -7,9 +7,9 @@ public class ListingData {
 
     String name;
     String address;
-    Double price;
+    String price;
     int numOfBed;
-    int numOfBath;
+    String numOfBath;
     String contactPerson;
     String contactPersonNumber;
     int image;
@@ -17,9 +17,9 @@ public class ListingData {
 
     public ListingData(String name,
                        String address,
-                       Double price,
+                       String price,
                        int  numOfBed,
-                       int numOfBath,
+                       String numOfBath,
                        String contactPerson,
                        String contactPersonNumber,
                        int image,
@@ -45,7 +45,7 @@ public class ListingData {
         return address;
     }
 
-    public Double getPrice() {
+    public String getPrice() {
         return price;
     }
 
@@ -61,7 +61,13 @@ public class ListingData {
         return image;
     }
 
+    public int getNumOfBed() {
+        return numOfBed;
+    }
 
+    public String getNumOfBath() {
+        return numOfBath;
+    }
 
     public int getId() {
         return id_;

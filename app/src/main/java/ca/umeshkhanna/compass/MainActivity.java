@@ -77,7 +77,8 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         public void onClick(View v) {
-            removeItem(v);
+
+           // removeItem(v);
         }
 
         private void removeItem(View v) {
@@ -85,7 +86,7 @@ public class MainActivity extends ActionBarActivity {
             RecyclerView.ViewHolder viewHolder
                     = recyclerView.findViewHolderForPosition(selectedItemPosition);
             TextView textViewName
-                    = (TextView) viewHolder.itemView.findViewById(R.id.textViewName);
+                    = (TextView) viewHolder.itemView.findViewById(R.id.textViewAddress);
             String selectedName = (String) textViewName.getText();
             int selectedItemId = -1;
             for (int i = 0; i < MyData.nameArray.length; i++) {

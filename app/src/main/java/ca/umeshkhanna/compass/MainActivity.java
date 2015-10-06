@@ -59,11 +59,6 @@ public class MainActivity extends ActionBarActivity {
                     MyData.id_[i]
             ));
         }
-//        String address,
-//        Double price,
-//        String contactPerson,
-//        String contactPersonNumber,
-
         removedItems = new ArrayList<Integer>();
 
         adapter = new MyAdapter(listing);
@@ -99,7 +94,7 @@ public class MainActivity extends ActionBarActivity {
                     })
                     .show();
 
-           // removeItem(v);
+
         }
 
         private void removeItem(View v) {
@@ -127,20 +122,19 @@ public class MainActivity extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         super.onOptionsItemSelected(item);
-        if (item.getItemId() == R.id.action_add_item) {
-//            check if any items to add
-            if (removedItems.size() != 0) {
-                //addRemovedItemToList();
-            } else {
-                Toast.makeText(this, "Nothing to add", Toast.LENGTH_SHORT).show();
-            }
-        }
+        Context context = getApplicationContext();
+        CharSequence text = "Check Out Umesh Khanna From The University Of Waterloo!";
+        int duration = Toast.LENGTH_LONG;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
         return true;
     }
 

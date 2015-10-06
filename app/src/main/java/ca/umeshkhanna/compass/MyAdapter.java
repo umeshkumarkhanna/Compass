@@ -14,7 +14,7 @@ www.101apps.co.za*/
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
-    private ArrayList<ListingData> peopleDataSet;
+    private ArrayList<ListingData> listingDataSet;
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
@@ -30,8 +30,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         }
     }
 
-    public MyAdapter(ArrayList<ListingData> people) {
-        this.peopleDataSet = people;
+    public MyAdapter(ArrayList<ListingData> listing) {
+        this.listingDataSet = listing;
     }
 
     @Override
@@ -53,13 +53,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 //        TextView textViewEmail = holder.textViewEmail;
         ImageView imageView = holder.imageViewIcon;
 
-        textViewName.setText(peopleDataSet.get(listPosition).getName());
+        textViewName.setText(listingDataSet.get(listPosition).getName());
 //        textViewEmail.setText(peopleDataSet.get(listPosition).getEmail());
-        imageView.setImageResource(peopleDataSet.get(listPosition).getImage());
+        imageView.setImageResource(listingDataSet.get(listPosition).getImage());
     }
 
     @Override
     public int getItemCount() {
-        return peopleDataSet.size();
+        return listingDataSet.size();
     }
 }

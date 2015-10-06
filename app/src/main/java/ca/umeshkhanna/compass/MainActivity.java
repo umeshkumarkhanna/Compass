@@ -78,7 +78,7 @@ public class MainActivity extends ActionBarActivity {
         public void onClick(View v) {
             new AlertDialog.Builder(context)
                     .setTitle("Umesh Kumar Khanna")
-                    .setMessage("If I could make this in a couple hours, think of what I can do in four months!")
+                    .setMessage("If I could make this in a couple hours, think of what I can do for you in four months (Winter 2016 Co-Op)!")
 
                     .setPositiveButton("Contact Me", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
